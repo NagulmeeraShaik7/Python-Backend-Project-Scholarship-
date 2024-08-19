@@ -1,0 +1,41 @@
+{% extends 'student/base.html' %}
+{% block content %}
+
+<h1>All Students Information</h1>
+
+<table class="table ">
+    <thead class="h6 text-danger">
+        <tr>
+            <td>FullName</td>
+            <td>Hallticket No</td>
+            <td>ClgName</td>
+            <td>Aadhar No</td>
+            <td>Mobile No</td>
+            <td>Amount</td>
+            <td><a href="{% url 'student_insert' %}" class="btn btn-outline-primary"> + Add New</a></td>
+        </tr>
+    </thead>
+    <tbody>
+            {% for student in student_list %}
+        <tr>
+            <td>{{student.fullname}}</td>
+            <td>{{student.hallticket}}</td>
+            <td>{{student.clgname}}</td>
+            <td>{{student.aadharno}}</td>
+            <td>{{student.mobile}}</td>
+            <td>{{student.amount}}</td>
+            <td>
+                <a href="{% url 'student_update' student.id %}">Update</a>
+                <form action="{% url 'student_delete' student.id %}" method="post">
+                    {% csrf_token %}
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+                
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock content%}
