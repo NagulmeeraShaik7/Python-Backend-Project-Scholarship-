@@ -184,8 +184,11 @@ class Student(models.Model):
 
 
 
-  <video controls src="https://youtu.be/hDMfrH_bIcw" title="Title"></video>
 
+
+
+
+https://github.com/user-attachments/assets/bc8dce38-421c-43bd-9928-fb658532e1b0
 
 
 
