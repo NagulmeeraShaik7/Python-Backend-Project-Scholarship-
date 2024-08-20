@@ -184,7 +184,7 @@ class Student(models.Model):
 
 
 
-  <video controls src="Bootstrap demo - Google Chrome 2024-08-20 16-49-52.mp4" title="Title"></video>
+  <video controls src="https://youtu.be/hDMfrH_bIcw" title="Title"></video>
 
 
 
